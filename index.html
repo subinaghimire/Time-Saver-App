@@ -9,9 +9,149 @@
     <!-- fontawesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <style>
+        .wrapper{
+            background:linear-gradient(rgba(158, 235, 106, 0.833), rgba(25, 80, 132, 0.774)) ;
+            min-height: 100vh;
+        };
+
+        .table{
+            --bs-table-bg: #fff0;
+            --bs-table-accent-bg: transparent;
+        };
+        
+    </style>
     <title>Time Saver App</title>
 </head>
 <body>
-  <button class="btn btn-danger">help <i class="fa-solid fa-house"></i></button>
+  <div class="wrapper pt-5">
+
+    <!-- title -->
+  <div class="container">
+    <h1 class="text-center">Time Saver App</h1>
+ 
+
+  <!-- form -->
+<form action="" class="border p-5 rounded shadow-lg">
+    <div class="row g-2">
+        <div class="col-md-7">
+          <input type="text" class="form-control" placeholder="task" aria-label="Task" name="task">
+        </div>
+        <div class="col-md-2">
+          <input type="number" class="form-control" placeholder="40" aria-label="40" name="hr" min="1">
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-primary d-grid">Add New Task </button>
+
+        </div>
+      </div>
+</form>
+  <!-- tables -->
+   <div class="row mt-5">
+    <div class="col">
+        <h3 class="text-center">Entry List</h3>
+        <hr />
+
+        <!-- Entry List Table -->
+        <table class="table border">
+          
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Sleeping</td>
+                <td>42hrs</td>
+                <td class="text-end">
+                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                    <button class="btn btn-success"><i class="fa-solid fa-arrow-right"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Sleeping</td>
+                <td>42hrs</td>
+                <td class="text-end">
+                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                    <button class="btn btn-success"><i class="fa-solid fa-arrow-right"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Sleeping</td>
+                <td>42hrs</td>
+                <td class="text-end">
+                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                    <button class="btn btn-success"><i class="fa-solid fa-arrow-right"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Sleeping</td>
+                <td>42hrs</td>
+                <td class="text-end">
+                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                    <button class="btn btn-success"><i class="fa-solid fa-arrow-right"></i></button>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+
+    </div>
+    <div class="col">
+        <h3 class="text-center">Bad List</h3>
+        <hr />
+
+        <!-- Bad List Table -->
+        <table class="table border">
+          
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Sleeping</td>
+                <td>42hrs</td>
+                <td class="text-end">
+                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                    <button class="btn btn-success"><i class="fa-solid fa-arrow-right"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Sleeping</td>
+                <td>42hrs</td>
+                <td class="text-end">
+                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                    <button class="btn btn-success"><i class="fa-solid fa-arrow-right"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Sleeping</td>
+                <td>42hrs</td>
+                <td class="text-end">
+                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                    <button class="btn btn-success"><i class="fa-solid fa-arrow-right"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Sleeping</td>
+                <td>42hrs</td>
+                <td class="text-end">
+                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                    <button class="btn btn-success"><i class="fa-solid fa-arrow-right"></i></button>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+
+    </div>
+   </div>
+
+  <!-- entry list table -->
+
+  <!-- bad list table -->
+</div>
+</div>
 </body>
 </html>
