@@ -9,6 +9,7 @@ const hr = newForm.get("hr");
 const obj= {
     task,
     hr,
+    id:randomIdGenerator(),
 };
 
   taskList.push(obj);
@@ -33,3 +34,16 @@ const displayEntryList = () => {
     })
     entryElm.innerHTML =str;
 }
+
+
+const randomIdGenerator = (length = 6) =>{
+const str = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890";
+
+let id = "";
+for (let i = 0; i<6; i++){
+    const randomIndex= Math.floor(Math.random()*str.length);
+    id+= str[randomIndex];
+   
+}
+return id;
+};
