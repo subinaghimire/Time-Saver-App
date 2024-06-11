@@ -1,17 +1,26 @@
 let taskList = [];
 
+const savedHrsElm = document.getElementById('savedHrs');
+const hoursPerWeek = 24*7;
+
 const handleOnSubmit = (e) =>{
 // const elm = document.getElementById("task");
 const newForm = new FormData(e);
 
 const task = newForm.get("task");
-const hr = newForm.get("hr");
+const hr = +newForm.get("hr");
 const obj= {
     task,
     hr,
     id:randomIdGenerator(),
     type:"entry",
 };
+
+// check if there is enough hours left
+const existingTtlHrs = taskTotal();
+if (existingTtlHrs + hr > hoursPerWeek){
+    return alert ("Sorry, Not Enough Time To Fit The Task From Last Week ");
+}
 
   taskList.push(obj);
     displayEntryList();
@@ -37,7 +46,8 @@ const displayEntryList = () => {
     </tr>`   
     })
     entryElm.innerHTML =str;
-}
+    taskTotal();
+};
 
 const displayBadList = () => {
    
@@ -93,4 +103,12 @@ return item;
 });
 displayEntryList();
 displayBadList();
+};
+
+const taskTotal = ()=> {
+    const ttlHr = taskList.reduce((acc, item)=>{
+        return acc + item.hr;
+    }, 0);
+document.getElementById("ttlHrs").innerHTML = ttlHr;
+return ttlHr;
 };
