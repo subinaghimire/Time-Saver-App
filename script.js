@@ -1,6 +1,6 @@
 let taskList = [];
 
-const savedHrsElm = document.getElementById('savedHrs');
+
 const hoursPerWeek = 24*7;
 
 const handleOnSubmit = (e) =>{
@@ -70,7 +70,9 @@ const displayBadList = () => {
               </tr>`   
     })
     badElm.innerHTML =str;
-}
+    document.getElementById('savedHrs').innerText = badList.reduce((acc, item) =>
+    acc + item.hr, 0);
+};
 
 const randomIdGenerator = (length = 6) =>{
 const str = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890";
