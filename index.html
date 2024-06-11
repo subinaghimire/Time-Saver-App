@@ -32,10 +32,10 @@
  
 
   <!-- form -->
-<form onsubmit="handleOnSubmit" action="" class="border p-5 rounded shadow-lg">
+<form onsubmit="handleOnSubmit(this)" action="javascript:void(0)" class="border p-5 rounded shadow-lg">
     <div class="row g-2">
         <div class="col-md-7">
-          <input type="text" class="form-control" placeholder="task" aria-label="Task" name="task">
+          <input type="text" class="form-control" placeholder="task" aria-label="Task" name="task" id="task">
         </div>
         <div class="col-md-2">
           <input type="number" class="form-control" placeholder="40" aria-label="40" name="hr" min="1">
